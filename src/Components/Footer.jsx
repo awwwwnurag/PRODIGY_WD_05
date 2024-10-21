@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <h3 className="footer__text">
-        Designed and Built by{" "}
-        <a href="https://github.com/victorcodess" target="_blank">
-          Victor Williams
+        Project by{" "}
+        <a href="https://github.com/awwwwnurag" target="_blank">
+          Anurag Aryan
         </a>{" "}
         with React, CSS, Chart.js, GeolocationAPI, and WeatherAPI.
       </h3>
