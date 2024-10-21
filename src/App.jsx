@@ -32,14 +32,37 @@ function App() {
   // import the API key from .env file
   const apiKey = import.meta.env.VITE_API_KEY;
 
+  const fetchWeatherData = (query) => {
+    console.log("Fetching weather for:", query);
+    fetch(
+      `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${query}&days=3&aqi=no&alerts=yes`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Weather data received:", data);
+        setWeather(data);
+      })
+      .catch((err) => {
+        console.error("Error fetching weather:", err);
+      });
+  };
+
   // Get user's location using the Geolocation API
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setLat(position.coords.latitude);
-        setLon(position.coords.longitude);
+        const { latitude, longitude } = position.coords;
+        fetchWeatherData(`${latitude},${longitude}`);
       },
-      (err) => console.log(err)
+      (err) => {
+        console.error("Geolocation error:", err);
+        fetchWeatherData("London"); // fallback to a default city
+      }
     );
   }, []);
 
