@@ -133,7 +133,7 @@ function App() {
             icon="fa-brands fa-skyatlas"
             className="logo__icon"
           />
-          <h1 className="logo__text">skyWatch</h1>
+          <h1 className="logo__text">AakashVani</h1>
         </div>
         <SearchBar setCity={setLocation} toggle={toggle} />
         <FontAwesomeIcon
