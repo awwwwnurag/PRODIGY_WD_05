@@ -6,12 +6,6 @@ AakashVani is a convenient and user-friendly tool that allows you to quickly and
 
 Designed and Built with React, CSS, Chart.js, GeolocationAPI, and WeatherAPI.
 
-## Screenshots and demo
-
-![image](https://user-images.githubusercontent.com/84178696/207818453-12d1fafa-792b-4159-94f2-e929efc55e72.png)
-
-![image](https://user-images.githubusercontent.com/84178696/207818860-604879d6-d2b4-445b-99a8-70d32581e7dc.png)
-
 ## Problems and Thought Process
 
 My web app is built using React, a popular JavaScript library for building user interfaces. This allowed me to create a dynamic and interactive app that is responsive to user input and provides a smooth user experience.
